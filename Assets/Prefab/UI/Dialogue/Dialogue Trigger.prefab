@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8231855715437503498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5748222067781693858}
+  - component: {fileID: 816408356520945923}
+  m_Layer: 0
+  m_Name: Dialogue Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5748222067781693858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231855715437503498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &816408356520945923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231855715437503498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e492b6623764dcbad18c1f46968aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Name: Level 1 Introduction
+    dialogueBoxPrefab: {fileID: 3300826976621418265, guid: 30fec7e4114534ff0a4f31490a194c0c, type: 3}
+    position: {x: 2.188, y: -261.63}
+    size: {x: 1481.96, y: 271.459}
+    name: Professor X
+    sentences:
+    - We wait you for so long! Come, I will tell you how to use this to control our
+      robots.
+    - We use Lua as our programming language to control our robots.
+    - If you don't know about it, don't panic. It is very easy to learn and we will
+      guide you.
+    - Anyways, let's start. You see the Robot button on the right? You'll see some
+      general information about our robot and select what robot you want to use there.
+    - The Function button contains each robot's functions and variables that are
+      avaliable to use.
+    - If you want to compile your code to see whether there is an error, you can
+      press the Compile button.
+    - You can test run the map by clicking the Test Run button. I suggest you to
+      click it before you write your code to see the map.
+    - You can click the Run button to run your code. Your code will be automatically
+      saved.
+    - You can click Enable console button to enable the console. The console is where
+      the print() function prints to.
+    - That's it! If you have any problem John will be there to help you.
+  - Name: Level 1 Tutorial
+    dialogueBoxPrefab: {fileID: 3300826976621418265, guid: 30fec7e4114534ff0a4f31490a194c0c, type: 3}
+    position: {x: 2.188, y: -261.63}
+    size: {x: 1481.96, y: 271.459}
+    name: John
+    sentences:
+    - Hi. I'm John and I'll be your mentor for a while. Anyways, let's select Robo
+      and test run the map!

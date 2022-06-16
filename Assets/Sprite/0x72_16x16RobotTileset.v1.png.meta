@@ -1,0 +1,2432 @@
+fileFormatVersion: 2
+guid: d277ed25f2fdc453284fa0a690651494
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robot_idle_1_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b9d5aa89b454e30a26c7a9e89eb370
+      internalID: 2095428541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_1_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b82302964ff43ba863e43bc219c2b2
+      internalID: 2133671293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_1_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810ce81ac3f734b199b99f394c36f414
+      internalID: -1906274163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_1_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95039cc9e62664029a99d61d03b2fe9c
+      internalID: 106122174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6765e839559294217aa74d7c88d63618
+      internalID: 90220384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_5
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d27c09ac236a4c82b5e55564cf8fbec
+      internalID: 94284002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7025dd7c31704e22b34cfcafcf8d950
+      internalID: 31154287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8854ac14cdce74e8a8f8e4fb967842b0
+      internalID: 125822015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_8
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2f1a7ccbb6f483a9a246330906a80f
+      internalID: 2024284243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cdf59f982d64baf96d4429447b66c1
+      internalID: 785348612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_10
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79b2c016aa2d4ff4ac70c261e49efc6
+      internalID: 2054546954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_11
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 257.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77a4b3c7234c419da02a40a02d7b5e3
+      internalID: 1773222901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_2_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edf1e92a88e9444d81079e160a6b670
+      internalID: 1571772703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_2_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb958c777fbc8468cb6a457dde18a141
+      internalID: 1727377221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_2_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ac63fe28f564ae9a1e104fc2ada7aa
+      internalID: 464325440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_2_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525f33035d5d74949be5d906a4409c36
+      internalID: 1912320819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb26d9d895a643e5afd63212d569860
+      internalID: -58516562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_17
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b4d642190934d5da9451c8e7239b18
+      internalID: -2029837552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476491b77390a42a68be229e1953251a
+      internalID: 66810860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_19
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e4d35634632442f906b9392f7038fb
+      internalID: 1894971053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f0b7b6d0c2c4ded9e34ae4f16f90f7
+      internalID: 1110565102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_21
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8815ab5989e4749f8983b68a7c1d1b2e
+      internalID: -1243715121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_22
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0694ee3335c4b31a0787d03940e242
+      internalID: 750685945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_23
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bb4ef14ad3e4dbe966752585fdf0dc
+      internalID: 2118817748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 225.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac53071f9fe540f38995f757b4e319c
+      internalID: -940473670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_3_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dc77e60e7a8416a98e3b55411c734f
+      internalID: -681039947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_3_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2387f0c2bda4e5b9f375931bde42d3
+      internalID: -344846895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_3_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a8ddc8a50be4b9fa47237b6e136aa8
+      internalID: 1254031689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_3_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4958996e9674a56a464adf0146d7e9
+      internalID: -313968331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_29
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee24e462795554608b0fb0235a33d58e
+      internalID: 1182996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_30
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142004f3dc49349adbd170087fbacec9
+      internalID: 1383674862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_31
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b44d22e9f9db44069baa42d0681fba8
+      internalID: 458485635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_32
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eddc1c4295f42728ee852d376128e3
+      internalID: 1477053696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_33
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0080a17ddfb74030bdc44cea048b949
+      internalID: -113963468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_34
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d3ebf16938f48ff91d0bb1dc6174f4
+      internalID: 1418686465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_35
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd714d12fb494419a9560d9819c87714
+      internalID: 626112341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_36
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 193.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0496727f3d274b00812c58e713c46e2
+      internalID: -1190116596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_4_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3163aa95eb24fb3970900e45953280
+      internalID: 500703716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_4_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d0cc368fb47488b9d9c4bf99679ca3
+      internalID: 809349880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_4_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd59cb384b6453d82b4dad463b7397
+      internalID: 1804964438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_4_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b65025d859a4fa7ab2162e6c706c19
+      internalID: -24983208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_41
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a71ad021516f4edd9e805d416ce2a24
+      internalID: -2134070680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_42
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775d7c89e8f714063a3cf6854b9e1861
+      internalID: -1385345970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_43
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b25cc4feb464ebfa8f616ceddf66af
+      internalID: 1843948441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_44
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 161.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7b04a11969b4c878b03b6d25a0b2aa
+      internalID: -535602602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_5_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54265258e2c96414883fa70a129a56d7
+      internalID: -727907634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_5_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a39f59accebd4c2d94739b28361a045
+      internalID: -13418689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_5_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f16895f0d5e94580af82065ea16b518
+      internalID: -2139918329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_5_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f3d6e7450f940ac9899a0ea2efb7f9
+      internalID: 757707905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_49
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafcea18b3d384cc8b3738333f39c87a
+      internalID: 1538525454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_50
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e15f5fa8811a4b4da1ae32c8bd29c83
+      internalID: 1102918218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_51
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1446331e0167d4262a3f48744c38d19e
+      internalID: -597942501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_52
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d17638356d54b25a399551735955b5
+      internalID: 970305013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_53
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5d3fb123f5d490481bfb8bd1e013be
+      internalID: 2079233755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_54
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f638cb87c014c38932a907855c5f87
+      internalID: 726615315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_55
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f184c3bcfa3b4128a919362eae0cbca
+      internalID: -652599426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_56
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 129.77777
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edd7470cf66949a5b2df05c980f8a3c
+      internalID: 370438313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_6_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1feb21bbffb948a1bc529a2fce31fa1
+      internalID: 1296040603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_6_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01756cf8fda749bca2c7f4fa893deb7
+      internalID: 759869906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_6_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863298b39117644f48ba72fb5f5396ed
+      internalID: -1672032720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_6_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6547997a09e7348e0a5ac7c841f476b2
+      internalID: 205160906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_61
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab9444fd38834ec9991e20588b8eeb8
+      internalID: -1204728669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_62
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5904ebf218e124fa8a6835461bf60d77
+      internalID: -964152023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_63
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8865b9f8b53be418191e6e473fac99f5
+      internalID: 919996605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_64
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475aa1dd830cb4b86a1dd8b93083dc7d
+      internalID: 993805825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_65
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62476542317c140ef9888968517906bc
+      internalID: 1624040219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_66
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59982e46d212749f7bdce24eee7c3be6
+      internalID: 403285777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_67
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35cec7fc282c4a17b6c5d7148dacfa1
+      internalID: -1314471499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_68
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 97.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ec74eef795046998684bbaa3bf5213
+      internalID: 652353309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_7_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f34a947487649af9cc34f9b768e2ae
+      internalID: -1230172291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_7_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc6a1b6a479148f5b008277f08ea32e
+      internalID: -1413327470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_7_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d55fae29bbf4e868e3f0a2c028523b
+      internalID: -1437322278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_7_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f0aa405152e455ebb64b3b30003455
+      internalID: -1373055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_73
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf38f6386413b486784123d0dab30aa4
+      internalID: -557584617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_74
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c364b042bb21e416aa2d620676e9a8ec
+      internalID: 1355259402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_75
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f69b45472a14e99ba16f373b9181e3
+      internalID: 1224050789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_76
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfa2a08e345c462aa104562ab75a3a5
+      internalID: -959218534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_77
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0379c630a834167b1bfd54abd517b5
+      internalID: -391584349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_78
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3727edaac30aa497cb04e552adb21dd0
+      internalID: -1635748243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_79
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1049e343fbe4c50a04b4defbf3b0ba
+      internalID: 534739084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_80
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 65.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0032fdd7b4f4b455490ebfb089cc508d
+      internalID: 1590858503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_8_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9cab71a489a42fca730e53c0de5c00
+      internalID: 1153198536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_8_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031463879d94946c0ab3f32a70c1c7bc
+      internalID: 456343478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_8_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a219da74d6e49ad9e31a94a412c8f4
+      internalID: 982206190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_8_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6949c2b343742cd9979826678a54b8
+      internalID: 1332839186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_85
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2baaaa81636484d9e63ec9e769c229
+      internalID: 269603814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_86
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b326c7ab483dd4ed5b8d22759b3b1bfb
+      internalID: -1099049285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_87
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197f7bd1fe6e342228c3636a92a38988
+      internalID: -289541055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_88
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94588fd78371e4c45aa7998cfad9a9da
+      internalID: -1417805389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_89
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9ddf444023345f1af7f63817818e17
+      internalID: 1788731370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_90
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30668fca9bfd4d2797c2796d281dd51
+      internalID: 875960631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_91
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73674515728aa4d4f9c155dd07adba6d
+      internalID: 1507575927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_92
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 33.77778
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c2e1c4f93644c7bbb4eed8d16fd6e3
+      internalID: 328300207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_9_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089fe4baf20f64de8889ccbb1a67034d
+      internalID: -1047257906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_9_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a031ee985de074140a2c9e6f60355bb0
+      internalID: -1671142583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_9_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7868fd58c61e846909f967cb74d8d4da
+      internalID: 652258008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_idle_9_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b445d86bd8d0f4264a3d066c44341361
+      internalID: -431080926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_97
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe69895f777f14bca81bb7fb63798e05
+      internalID: -1338534464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_98
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd4b02fdc3dd4210ad02d04ba07cb1d
+      internalID: 1705003433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_99
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26acfe0d8abb3484594fc25d14f7a6d7
+      internalID: 2145169010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_100
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b527e8cfc76a4d31861578b5e911230
+      internalID: 1576222912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_101
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340e8029202eb4c1f8c585ceb3fc25f5
+      internalID: 1263274733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_102
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea469c5bcef14a78801da7efe7a690b
+      internalID: 1109697812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_103
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e89e5b785ea142259342aa41c1a3ad2
+      internalID: 1094028465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0x72_16x16RobotTileset.v1_104
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1.7777786
+        width: 16.307692
+        height: 32.22222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87796e6885fcd4e9fa346fd23ee3b820
+      internalID: 1086570048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      0x72_16x16RobotTileset.v1_64: 993805825
+      0x72_16x16RobotTileset.v1_35: 626112341
+      0x72_16x16RobotTileset.v1_24: -940473670
+      0x72_16x16RobotTileset.v1_62: -964152023
+      0x72_16x16RobotTileset.v1_73: -557584617
+      0x72_16x16RobotTileset.v1_9: 785348612
+      0x72_16x16RobotTileset.v1_103: 1094028465
+      0x72_16x16RobotTileset.v1_21: -1243715121
+      0x72_16x16RobotTileset.v1_61: -1204728669
+      0x72_16x16RobotTileset.v1_92: 328300207
+      0x72_16x16RobotTileset.v1_67: -1314471499
+      Robot_idle_3_3: 1254031689
+      0x72_16x16RobotTileset.v1_75: 1224050789
+      Robot_idle_5_3: -2139918329
+      Robot_idle_1_1: 2095428541
+      0x72_16x16RobotTileset.v1_87: -289541055
+      0x72_16x16RobotTileset.v1_30: 1383674862
+      0x72_16x16RobotTileset.v1_104: 1086570048
+      Robot_idle_7_2: -1413327470
+      0x72_16x16RobotTileset.v1_6: 31154287
+      0x72_16x16RobotTileset.v1_98: 1705003433
+      Robot_idle_1_4: 106122174
+      Robot_idle_2_1: 1571772703
+      0x72_16x16RobotTileset.v1_97: -1338534464
+      Robot_idle_4_3: 1804964438
+      Robot_idle_9_2: -1671142583
+      Robot_idle_7_4: -1373055
+      0x72_16x16RobotTileset.v1_17: -2029837552
+      0x72_16x16RobotTileset.v1_52: 970305013
+      Robot_idle_4_4: -24983208
+      0x72_16x16RobotTileset.v1_99: 2145169010
+      0x72_16x16RobotTileset.v1_29: 1182996
+      0x72_16x16RobotTileset.v1_10: 2054546954
+      0x72_16x16RobotTileset.v1_54: 726615315
+      Robot_idle_1_2: 2133671293
+      Robot_idle_1_3: -1906274163
+      0x72_16x16RobotTileset.v1_89: 1788731370
+      Robot_idle_5_1: -727907634
+      0x72_16x16RobotTileset.v1_4: 90220384
+      0x72_16x16RobotTileset.v1_22: 750685945
+      0x72_16x16RobotTileset.v1_36: -1190116596
+      Robot_idle_9_1: -1047257906
+      Robot_idle_8_3: 982206190
+      Robot_idle_3_1: -681039947
+      Robot_idle_4_1: 500703716
+      0x72_16x16RobotTileset.v1_7: 125822015
+      Robot_idle_8_2: 456343478
+      0x72_16x16RobotTileset.v1_49: 1538525454
+      0x72_16x16RobotTileset.v1_51: -597942501
+      0x72_16x16RobotTileset.v1_11: 1773222901
+      Robot_idle_8_1: 1153198536
+      0x72_16x16RobotTileset.v1_23: 2118817748
+      Robot_idle_5_2: -13418689
+      0x72_16x16RobotTileset.v1_34: 1418686465
+      0x72_16x16RobotTileset.v1_43: 1843948441
+      0x72_16x16RobotTileset.v1_42: -1385345970
+      0x72_16x16RobotTileset.v1_80: 1590858503
+      Robot_idle_9_4: -431080926
+      0x72_16x16RobotTileset.v1_100: 1576222912
+      0x72_16x16RobotTileset.v1_79: 534739084
+      0x72_16x16RobotTileset.v1_78: -1635748243
+      0x72_16x16RobotTileset.v1_90: 875960631
+      Robot_idle_2_4: 1912320819
+      Robot_idle_7_1: -1230172291
+      0x72_16x16RobotTileset.v1_101: 1263274733
+      0x72_16x16RobotTileset.v1_19: 1894971053
+      0x72_16x16RobotTileset.v1_33: -113963468
+      Robot_idle_7_3: -1437322278
+      Robot_idle_6_3: -1672032720
+      Robot_idle_6_1: 1296040603
+      Robot_idle_2_3: 464325440
+      0x72_16x16RobotTileset.v1_5: 94284002
+      0x72_16x16RobotTileset.v1_41: -2134070680
+      0x72_16x16RobotTileset.v1_91: 1507575927
+      0x72_16x16RobotTileset.v1_63: 919996605
+      0x72_16x16RobotTileset.v1_31: 458485635
+      Robot_idle_8_4: 1332839186
+      0x72_16x16RobotTileset.v1_16: -58516562
+      0x72_16x16RobotTileset.v1_44: -535602602
+      Robot_idle_4_2: 809349880
+      0x72_16x16RobotTileset.v1_88: -1417805389
+      Robot_idle_9_3: 652258008
+      Robot_idle_2_2: 1727377221
+      0x72_16x16RobotTileset.v1_76: -959218534
+      0x72_16x16RobotTileset.v1_65: 1624040219
+      0x72_16x16RobotTileset.v1_55: -652599426
+      0x72_16x16RobotTileset.v1_8: 2024284243
+      0x72_16x16RobotTileset.v1_86: -1099049285
+      0x72_16x16RobotTileset.v1_102: 1109697812
+      Robot_idle_3_2: -344846895
+      Robot_idle_5_4: 757707905
+      0x72_16x16RobotTileset.v1_66: 403285777
+      Robot_idle_6_2: 759869906
+      Robot_idle_6_4: 205160906
+      0x72_16x16RobotTileset.v1_68: 652353309
+      0x72_16x16RobotTileset.v1_53: 2079233755
+      0x72_16x16RobotTileset.v1_18: 66810860
+      0x72_16x16RobotTileset.v1_50: 1102918218
+      0x72_16x16RobotTileset.v1_85: 269603814
+      0x72_16x16RobotTileset.v1_20: 1110565102
+      0x72_16x16RobotTileset.v1_56: 370438313
+      0x72_16x16RobotTileset.v1_74: 1355259402
+      0x72_16x16RobotTileset.v1_77: -391584349
+      0x72_16x16RobotTileset.v1_32: 1477053696
+      Robot_idle_3_4: -313968331
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

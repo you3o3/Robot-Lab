@@ -1,0 +1,642 @@
+﻿//string _acceptedSpecialChar = " ~!@#$%^&*()_+-={}|[]\\:\";'<>?,./";
+
+    /*
+     * Player have following data:
+     * robot position
+     * traps position
+     * enemies position
+     * goal position
+     * 
+     * String format:
+     * 
+     * FIXME Important decision: for loop cannot use semicolon ';'
+     *  use "for x from 1 to 10 do" instead
+     * 
+     * if (enemy in front) then
+     * {
+     *     Fire();
+     * }
+     * else
+     * {
+     *     Walk(right);
+     * }
+     * 
+     * TODO let player hardcode? eg walk right for 1s
+     */
+    public List<Code> ParseStringIntoCode(string s, int robot)
+    {
+        if (robot == 0)
+        {
+            error = "You did not choose your robot!";
+            return null;
+        }
+        parser = new(); // reset parser
+        //TODO error represented in private string variable
+        // only accepted char will count
+        //string _acceptedSpecialChar = " ~!@#$%^&*()_+-={}|[]\\:\";'<>?,./";
+
+        // FIXME Important decision: not allow player to type string
+        
+        // parse code
+
+        //string code = FilterUnusedCharacter(s);
+        //string[] codeChunk = SplitCodeIntoChunk(code);
+        ////TODO split into sentence, notice that before if, ends with ';' is one chunk
+        //// `if { }` is in one chunk and `else { }` is in other chunk
+
+        //List<Code> result = new();
+        //foreach (string cc in codeChunk)
+        //{
+        //    string[] codeSentences = cc.Split(';', StringSplitOptions.RemoveEmptyEntries);
+        //    Code parsedCode = new();
+
+        //    string first = excessSpace.Replace(codeSentences[0].Replace("\t", " "), " ").Trim();
+        //    ConditionalStatementCheck(first, parsedCode);
+
+        //    foreach (string cs in codeSentences)
+        //    {
+        //        // trim excess space (space >= 2) and remove tab
+        //        string trimed = excessSpace.Replace(cs.Replace("\t", " "), " ").Trim();
+        //        Action action = ParseSingleSentence(trimed);
+        //        if (action == null)
+        //        {
+        //            error = "Compile error at line: " + cs;
+        //            return null;
+        //        }
+        //        parsedCode.AddAction(action);
+        //    }
+
+        //    result.Add(parsedCode);
+        //}
+
+        //return result;
+
+
+    }
+
+    // FIXME don't use this
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    private string[] SplitCodeIntoChunk(string code)
+    {
+        List<string> result = new();
+        string[] codeChunk = code.Split(new char[] { '{', '}' }, StringSplitOptions.RemoveEmptyEntries);
+        string store = "";
+        foreach (string chunk in codeChunk)
+        {
+            int idx = chunk.LastIndexOf(';');
+            if (idx != -1)
+            {
+                // range operator
+                result.Add(store + chunk[..idx]);
+            }
+            store = chunk[(idx + 1)..];
+        }
+        return result.ToArray();
+    }
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+test code
+
+        //string[] codes =
+        //{
+        //    "var result = 1",
+        //    "for i = 5 to 0 step -1 then var result = result * i",
+        //    "result",
+        //    "var i = 0",
+        //    "result",
+        //    "while i < 10000 then var i = i + 1",
+        //    "i"
+        //};
+
+        //foreach (string expr in codes)
+        //{
+        //    var tmp = Compiler.Run("This_is_fileName", expr);
+        //    if (tmp.Error != null)
+        //        Debug.LogError(tmp.Error.ToString());
+        //    else if (tmp.Obj != null)
+        //        Debug.Log(tmp.Obj.ToString());
+        //}
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+code parser
+
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class CodeParser : SingletonWMonoBehaviour<CodeParser>
+{
+    public static CodeParser Instance { get; private set; }
+
+    private void Awake()
+    {
+        Instance = CreateInstance(Instance, true);
+    }
+
+    private string error;
+    public Parser parser = new();
+
+    private static readonly Regex excessSpace = new(@"[ ]{2,}"); // space >= 2
+    private static readonly Regex space = new(@"\s+");
+
+    internal struct ParsedCodeSeg
+    {
+        private List<Action> parsedActions;
+        private Code parsedCode;
+
+        internal List<Action> ParsedActions
+        {
+            get { return parsedActions; }
+            set { if (parsedActions == null && parsedCode == null) parsedActions = value;
+                    else Debug.Log("Error in ParsedCodeSeg");
+                }
+        }
+
+        internal Code ParsedCode
+        {
+            get { return parsedCode; }
+            set { if (parsedActions == null && parsedCode == null) parsedCode = value;
+                    else Debug.Log("Error in ParsedCodeSeg");
+                }
+        }
+
+        internal void Run()
+        {
+            if (parsedActions != null)
+            {
+                foreach (Action action in parsedActions)
+                {
+                    action();
+                }
+            }
+            if (parsedCode != null)
+            {
+                parsedCode.Run();
+            }
+        }
+    }
+
+    public class Code
+    {
+        Queue<ParsedCodeSeg> codeSeg = new();
+        LogicExpression exp; // execute when true
+
+        //FIXME IMPORTANT!!!!!!!!!!!!!!!!!
+        // doesn't work for nested if statements
+        // consider adding a Map<int index + LogicExpression exp, List<Code> block>
+        // index indicating where to operate the block
+
+        // eg.
+        //
+        // int x = 0;           index = 0 in actions
+        // int y = 1;           index = 1 in actions
+        // if (x > y)           
+        // {                    index = 2, exp = x > y, block starts here
+        //     y++;
+        //     x--;
+        // }                    block ends here
+        // x = 1;               index = 2 in actions
+        // return 0;            index = 3 in actions
+        
+        // the block can be parsed using ParseStringIntoCode() into List<Code>
+        // generally, index of the block to be added would be action.Count
+        // !!!!!!!!!!!!!!!!!!!!
+
+        internal string AddLogicExp(string logicExp)
+        {
+            try
+            {
+                exp = Instance.parser.Parse(logicExp);
+                return null;
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
+        internal void AddParsedCodeSeg(ParsedCodeSeg parsedCodeSeg)
+        {
+            codeSeg.Enqueue(parsedCodeSeg);
+        }
+
+        public void Run()
+        {
+            if (exp != null)
+                if (!exp.GetResult()) return;
+            int idx = 0;
+            while (codeSeg.Count > 0)
+            {
+                // TODO when map of above contains key idx, should call the val List<Code> first
+                ParsedCodeSeg seg = codeSeg.Dequeue();
+                seg.Run();
+                idx++;
+            }
+        }
+    }
+
+    // TODO add update of given variables that the player can see via parser
+    // Important too!!!!!!!!!!!!!!!!
+    // parser.ExpressionContext[name].Set(value);
+    // !!!!!!!!!!!!!!
+
+    public string IsErrorWhenCompileCode(string code)
+    {
+        if (ParseStringIntoCode(code, RobotInfoForGame.Instance.Robot) == null)
+        {
+            return error;
+        }
+        return null;
+    }
+
+    /*
+     * Player have following data:
+     * robot position
+     * traps position
+     * enemies position
+     * goal position
+     * 
+     * String format:
+     * 
+     * FIXME Important decision: for loop cannot use semicolon ';'
+     *  use "for x from 1 to 10 do" instead
+     * 
+     * if (enemy in front) then
+     * {
+     *     Fire();
+     * }
+     * else
+     * {
+     *     Walk(right);
+     * }
+     * 
+     * TODO let player hardcode? eg walk right for 1s
+     */
+    public Code ParseStringIntoCode(string s, int robot)
+    {
+        if (robot == 0)
+        {
+            error = "You did not choose your robot!";
+            return null;
+        }
+        parser = new(); // reset parser
+        
+        // FIXME Important decision: not allow player to type string
+
+        // parse code
+        Code code = new();
+        string err = Compile(s, ref code);
+        if (err != null)
+        {
+            error = err;
+            return null;
+        }
+        return code;
+    }
+
+    private string Compile(string s, ref Code unparsed)
+    {
+        string code = FilterUnusedCharacter(s);
+        code = TrimExcessSpaceAndTab(code);
+
+        List<(int Begin, int End)> bracketIdx = new(); // index of brackets {}, ignore nested bracket
+
+        // Calculate index of brackets
+        Stack<char> stack = new();
+        int begin = -1;
+        for (int i = 0; i < code.Length; i++)
+        {
+            char ch = code[i];
+            if (ch == '{')
+            {
+                if (stack.Count == 0)
+                {
+                    begin = i;
+                }
+                stack.Push('{');
+            }
+            else if (ch == '}')
+            {
+                if (stack.Count == 0)
+                {
+                    return "Error: You probably miss a '{' in your code, extra '}' is found.";
+                }
+                else if (stack.Count == 1)
+                {
+                    bracketIdx.Add((begin, i));
+                    begin = -1;
+                }
+                stack.Pop();
+            }
+        }
+        if (stack.Count > 0)
+        {
+            return "Error: You probably miss a '}' in your code, extra '{' is found.";
+        }
+
+        // Separate into chunks, note that nested bracket are ignored, i.e. only consider outter bracket
+        List<int> splitPoints = new();
+        int prevEnd = 0;
+        foreach ((int Begin, int End) idx in bracketIdx)
+        {
+            int splitPoint = code.Substring(prevEnd, idx.Begin - prevEnd).LastIndexOf(';') + 1;
+            if (splitPoint == 0)
+            {
+                if (prevEnd == 0) continue;
+                splitPoints.Add(prevEnd + 1);
+            }
+            else
+            {
+                splitPoints.Add(splitPoint);
+            }
+            prevEnd = idx.End;
+        }
+        string[] chunks = SplitStringAt(code, splitPoints.ToArray());
+        chunks = chunks.Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();
+
+        // for each chunk, if it has bracket, compute the condition and the code inside the bracket
+        // if it does not have bracket, just compute and store in actions
+        string prevCondition = "";
+        foreach (string chunk in chunks)
+        {
+            ParsedCodeSeg parsedCodeSeg = new();
+            if (chunk.Contains('{') && chunk.Contains('}'))
+            {
+                Code c = new();
+                string condition = chunk.Substring(0, chunk.IndexOf('{'));
+                string actualCondition;
+                bool isElse;
+                if (!ConditionalStatementCheck(condition, c, prevCondition, out actualCondition, out isElse))
+                {
+                    return "Error: You wrote something wrong here: " + condition;
+                }
+                // reset if it is "else", else store the condition
+                prevCondition = isElse ? "" : actualCondition;
+                string err = Compile(GetStringBetweenChar(chunk, '{', '}', false, true), ref c);
+                if (err != null) return err;
+                parsedCodeSeg.ParsedCode = c;
+                unparsed.AddParsedCodeSeg(parsedCodeSeg);
+            }
+            else
+            {
+                List<Action> actions = ParseCodeChunkWithoutBracket(chunk);
+                parsedCodeSeg.ParsedActions = actions;
+                unparsed.AddParsedCodeSeg(parsedCodeSeg);
+            }
+        }
+
+        return null;
+    }
+
+    private List<Action> ParseCodeChunkWithoutBracket(string codeChunk)
+    {
+        List<Action> result = new();
+        string[] codeSentences = codeChunk.Split(';', StringSplitOptions.RemoveEmptyEntries);
+
+        foreach (string cs in codeSentences)
+        {
+            string trimed = TrimExcessSpaceAndTab(cs);
+            Action action = ParseSingleSentence(trimed);
+            if (action == null)
+            {
+                error = "Compile error at line: " + cs;
+                return null;
+            }
+            result.Add(action);
+        }
+        
+        return result;
+    }
+
+    private string FilterUnusedCharacter(string code)
+    {
+        // TODO move this as class variable, not instance
+        string _acceptedSpecialChar = " %&*()_+-={}|[];.";
+        List<char> acceptedSpecialChar = new();
+        foreach (char ch in _acceptedSpecialChar)
+        {
+            acceptedSpecialChar.Add(ch);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        foreach (char ch in code)
+        {
+            if ((ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'Z') ||
+                (ch >= 'a' && ch <= 'z') || acceptedSpecialChar.Contains(ch))
+            {
+                sb.Append(ch);
+            }
+        }
+
+        return sb.ToString();
+    }
+
+    // if-elseif-else stop doing comparisons as soon as it finds that one is true
+    // but in this method the so called "if-elseif-else" is separated into different if 
+    // and it is not efficient at all. Try to use different way.
+    private bool ConditionalStatementCheck(string condition, Code parsedCode, string prevCondition, out string actualConditionParsed, out bool isElse)
+    {
+        condition = TrimExcessSpaceAndTab(condition);
+        bool isIf = condition.StartsWith("if");
+        bool isElseIf = condition.StartsWith("else if");
+        isElse = condition.Equals("else");
+        actualConditionParsed = "";
+
+        // no previous condition, i.e. else if and else are not allowed
+        if (prevCondition.Equals("") && (isElseIf || isElse))
+        {
+            error = "Error: use of \"else if\" or \"else\" without an \"if\" beforehand";
+            return false;
+        }
+
+        if (isIf || isElseIf)
+        {
+            string logicExp = GetStringBetweenChar(condition, '(', ')');
+            if (logicExp == null)
+            {
+                error = "Compile error at line: " + condition;
+                return false;
+            }
+            actualConditionParsed = isElseIf ? ("!(" + prevCondition + ") &&" + logicExp) : logicExp;
+            // if (x) {} else if (y) {} == if (x) {} if (!x && y) {}
+            string err = parsedCode.AddLogicExp(actualConditionParsed);
+            if (err != null)
+            {
+                error = "Compile error at line: " + condition + " : " + err;
+                return false;
+            }
+            return true;
+        }
+        else if (isElse)
+        {
+            actualConditionParsed = "!(" + prevCondition + ")";
+            string err = parsedCode.AddLogicExp(actualConditionParsed);
+            if (err != null)
+            {
+                error = "Compile error at line: " + condition + " : " + err;
+                return false;
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    // Parse Single Sentence -------------------------------------------------------------------------
+
+    // the sentence is without ';', e.g. Walk(-1); => Walk(-1)
+    private Action ParseSingleSentence(string code)
+    {
+        if (code == null) return null;
+        Action action = null;
+        if (code.Contains("=")) // assignment
+        {
+            string[] splited = code.Split(new char[] { ' ', '=' }, StringSplitOptions.RemoveEmptyEntries);
+            Type t = GetTypeFromString(splited[0]);
+            if (t == null) return null;
+            object o = GetObjectFromString(splited[2], t);
+            if (o == null) return null;
+
+            if (splited[0].Equals("bool"))
+                action = () => { DeclareVariable(splited[1], (bool)o); };
+            else
+                action = () => { DeclareVariable(splited[1], (double)o); };
+        }
+        else if (code.Length >= 4) // functions
+        {
+            code.Replace(" ", string.Empty);
+            switch(code.Substring(0, 4))
+            {
+                case "Walk":
+                    int direction = 0;
+                    bool success = int.TryParse(GetStringBetweenChar(code, '(', ')'), out direction);
+                    if (!success) return null;
+                    action = () => {  Walk(direction); };
+                    break;
+                case "Jump":
+                    if (!code.Substring(4, 2).Equals("()")) return null;
+                    action = () => { Jump(); };
+                    break;
+                case "Fire":
+                    if (!code.Substring(4, 2).Equals("()")) return null;
+                    action = () => { Fire(); };
+                    break;
+                    //TODO add in more cases
+            }
+        }
+        return action;
+    }
+
+    // https://stackoverflow.com/questions/2922855/how-to-convert-string-to-any-type
+    private object GetObjectFromString(string s, Type t)
+    {
+        TypeConverter typeConverter = TypeDescriptor.GetConverter(t);
+        try
+        {
+            object o = typeConverter.ConvertFromString(s);
+            return o;
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
+    private Type GetTypeFromString(string s)
+    {
+        if (s.Equals("bool")) return typeof(bool);
+        if (s.Equals("int")) return typeof(int);
+        //if (s.Equals("char")) return typeof(char);     // char is forbiddened
+        if (s.Equals("float")) return typeof(float);
+        if (s.Equals("double")) return typeof(double);
+        //if (s.Equals("string")) return typeof(string); // string is forbiddened
+        return null;
+    }
+
+    private void DeclareVariable(string name, bool value)
+    {
+        parser.ExpressionContext[name].Set(value);
+    }
+
+    private void DeclareVariable(string name, double value)
+    {
+        parser.ExpressionContext[name].Set(value);
+    }
+
+    private void Walk(int direction)
+    {
+        //TODO walk
+    }
+
+    private void Jump()
+    {
+        //TODO shoot
+    }
+
+    private void Fire()
+    {
+        //TODO fire
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    // Useful functions ------------------------------------------------------------------------------
+
+    // first occurence only
+    private string GetStringBetweenChar(string s, char chBegin, char chEnd,
+        bool chBeginUseLastIndex = false, bool chEndUseLastIndex = false)
+    {
+        int idxBegin = chBeginUseLastIndex ? s.LastIndexOf(chBegin) : s.IndexOf(chBegin);
+        if (idxBegin != -1)
+        {
+            int idxEnd = chEndUseLastIndex ? s.LastIndexOf(chEnd) : s.IndexOf(chEnd);
+            if (idxEnd != -1)
+            {
+                return s.Substring(idxBegin + 1, idxEnd - idxBegin - 1);
+            }
+        }
+        return null;
+    }
+
+    // https://stackoverflow.com/questions/7148768/string-split-by-index-params
+    // will split string before the index
+    // e.g. s = "hello", idx = 2
+    //           01234
+    // split into "he" and "llo"
+    private string[] SplitStringAt(string s, params int[] idx)
+    {
+        idx = idx.Distinct().OrderBy(x => x).ToArray();
+        string[] result = new string[idx.Length + 1];
+        int pos = 0;
+
+        for (int i = 0; i < idx.Length; pos = idx[i++])
+            result[i] = s.Substring(pos, idx[i] - pos);
+
+        result[idx.Length] = s.Substring(pos);
+
+        return result;
+    }
+
+    // trim excess space (space >= 2) and remove tab
+    private string TrimExcessSpaceAndTab(string s)
+    {
+        return excessSpace.Replace(s.Replace("\t", " "), " ").Trim();
+    }
+
+    private string TrimAllSpace(string s)
+    {
+        return space.Replace(s, "");
+    }
+
+}

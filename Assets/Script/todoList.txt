@@ -1,0 +1,40 @@
+﻿
+TODO:
+
+**1. Implement Cheato. Cheato is a robot that provides extra functions to player for easier level completion.
+However, the implementation was not completed due to time constraints.
+
+2. Add more diversity to levels. Current levels only consist of ground, wall, floating platforms, goal door
+, enemies, and traps. New objects such as humans (if robot shoots human, then level lose) and helpful
+items (like when pick up, invincible for a few seconds) can be added.
+
+3. Provide more available functions and variables to players.
+
+4. Improve the story of the game and the dialogue system to make the game more interactive.
+
+**5.5 Show message instead of dying when player die in test run mode
+
+6. Implement a score system instead of a hard time limit which makes players lose immediately if they cannot reach it.
+
+**7. Convert HorizontalBlock to Block which have four variables x1, x2, y1, y2 each locate the start and
+end of x & y, instead of just xStart, xEnd, and y.
+
+**8. Check errors like when player jump to winning pos and player exit at the same time,
+the win panel still pop up in transition back to coding scene, and level reached still increase
+
+
+
+
+
+DONE:
+
+5. When players are test running in manual mode, allow them to be invincible, so that they do not die and
+respawn, because some levels might be too extreme for human to complete.
+
+### GameManager.PlayerDied() implemented
+
+
+8. Camera full map view by pressing button.
+
+### press L for free view camera
+### CameraSwitch, FreeViewCamera
