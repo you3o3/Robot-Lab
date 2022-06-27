@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Fading : SingletonWMonoBehaviour<Fading>
@@ -9,6 +10,11 @@ public class Fading : SingletonWMonoBehaviour<Fading>
     private void Awake()
     {
         Instance = CreateInstance(Instance, true);
+    }
+
+    private void Start()
+    {
+        SceneManager.activeSceneChanged += ChangedActiveScene;
     }
 
     // Source: https://www.youtube.com/watch?v=oNz4I0RfsEg
@@ -49,5 +55,10 @@ public class Fading : SingletonWMonoBehaviour<Fading>
             yield return new WaitForSeconds(fadeInGap);
         }
         onComplete();
+    }
+
+    private void ChangedActiveScene(Scene current, Scene next)
+    {
+        StopAllCoroutines();
     }
 }

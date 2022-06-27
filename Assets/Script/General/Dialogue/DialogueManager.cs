@@ -19,7 +19,7 @@ public class DialogueManager : SingletonWMonoBehaviour<DialogueManager>
     // if scale not appropriate, see https://forum.unity.com/threads/how-to-scale-child-like-it-was-part-of-parent.775421/
 
     //Content
-    private GameObject UI;
+    private GameObject ui;
     private Queue<string> sentences;
     private UnityEvent eventAfterDialogue;
 
@@ -35,12 +35,6 @@ public class DialogueManager : SingletonWMonoBehaviour<DialogueManager>
         sentences = new();
         // see https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager-activeSceneChanged.html
         SceneManager.activeSceneChanged += ChangedActiveScene;
-    }
-
-    public void Init()
-    {
-        //FIXME this is not a good way to set the UI.
-        UI = GameObject.Find("UI Manager");
     }
 
     private void Update()
@@ -59,6 +53,12 @@ public class DialogueManager : SingletonWMonoBehaviour<DialogueManager>
 
     public void StartDialogue(Dialogue dialogue, bool triggerOnlyOnce = true)
     {
+        if (ui == null)
+        {
+            //FIXME this is not a good way to set the UI.
+            ui = GameObject.Find("UI Manager");
+        }
+
         // TODO here I used is triggered to track dialogues that are already presented and don't present again
         // maybe allow player to revisit the dialogues somewhere
         if (triggerOnlyOnce)
@@ -75,7 +75,7 @@ public class DialogueManager : SingletonWMonoBehaviour<DialogueManager>
 
         eventAfterDialogue = dialogue.eventAfterDialogue;
 
-        instantiatedDialogueBoxPanel = Instantiate(dialogue.DialogueBox, UI.transform.position, Quaternion.identity, UI.transform);
+        instantiatedDialogueBoxPanel = Instantiate(dialogue.DialogueBox, ui.transform.position, Quaternion.identity, ui.transform);
         instantiatedDialogueBox = instantiatedDialogueBoxPanel.transform.GetChild(0).gameObject;
         // box position and size
         RectTransform rt = instantiatedDialogueBox.GetComponent<RectTransform>();

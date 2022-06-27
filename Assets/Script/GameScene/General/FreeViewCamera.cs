@@ -36,7 +36,7 @@ public class FreeViewCamera : MonoBehaviour
     {
         GameManager.Instance.Player.GetComponent<PlayerInteraction>().DisablePlayer();
 
-        LevelInfo lvobj = DataBuffer.Instance.Get<LevelInfo>();
+        LevelInfo lvobj = DataBuffer.Instance.levelInfo;
         Tilemap tilemap = lvobj.background.GetComponent<Tilemap>();
         tilemap.CompressBounds();
         CameraBound = tilemap.cellBounds;
@@ -44,7 +44,9 @@ public class FreeViewCamera : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.Instance.Player.GetComponent<PlayerInteraction>().EnablePlayer();
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.Player.GetComponent<PlayerInteraction>().EnablePlayer();
+        }
     }
-
 }

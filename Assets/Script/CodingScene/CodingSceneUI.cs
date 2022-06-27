@@ -38,7 +38,7 @@ public class CodingSceneUI : SingletonWMonoBehaviour<CodingSceneUI>
         levelLoader = GameObject.Find("Scene Loader").GetComponent<LevelLoader>();
 
         // get level and respective time limit
-        int level = DataBuffer.Instance.Get<int>("level");
+        int level = DataBuffer.Instance.level;
         if (level > GeneralInfo.TotalLevels)
         {
             Debug.Log("Level exceed");
@@ -54,7 +54,7 @@ public class CodingSceneUI : SingletonWMonoBehaviour<CodingSceneUI>
 
         // the robot select info is carried to next game TODO maybe save which robot the code use in user computer too?
         SelectRobot(RobotData.Instance.Robot);
-        string codeSave = RobotInfo.codes.TryGetValue(DataBuffer.Instance.Get<int>("level"), out codeSave) ? codeSave : "";
+        string codeSave = RobotInfo.codes.TryGetValue(DataBuffer.Instance.level, out codeSave) ? codeSave : "";
         codeInput.text = codeSave;
 
         // change background music
@@ -129,7 +129,7 @@ public class CodingSceneUI : SingletonWMonoBehaviour<CodingSceneUI>
     public void OnBackButtonPress()
     {
         CodeManager.Instance.SaveCode(codeInput.text);
-        DataBuffer.Instance.Add(0, "level");
+        DataBuffer.Instance.level = 0;
         levelLoader.LoadScene(GeneralInfo.sceneIdx["LevelSelectScene"]);
     }
 
@@ -157,7 +157,7 @@ public class CodingSceneUI : SingletonWMonoBehaviour<CodingSceneUI>
 
     public void OnHintButtonPress()
     {
-        Dialogue hint = DialogueTrigger.Instance.GetHintOfLevel(DataBuffer.Instance.Get<int>("level"));
+        Dialogue hint = DialogueTrigger.Instance.GetHintOfLevel(DataBuffer.Instance.level);
         if (hint == null) return;
         DialogueTrigger.Instance.TriggerDialogue(hint, false);
     }

@@ -27,7 +27,7 @@ public class LevelSelectButtonOnClickAdder : MonoBehaviour
 
     private void ButtonTask(int level)
     {
-        DataBuffer.Instance.Add(level, "level");
+        DataBuffer.Instance.level = level;
         levelLoader.LoadScene(GeneralInfo.sceneIdx["CodingScene"]);
         Debug.Log("Level set to " + level);
     }

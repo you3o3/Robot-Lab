@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using MoonSharp.Interpreter;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public abstract class RobotFunction
 {
@@ -34,23 +36,33 @@ public abstract class RobotFunction
         robot = null;
     }
 
+    public virtual void AddUserFunctions(Script script)
+    {
+        script.Globals["walk"] = (Action<float>)Walk;
+        script.Globals["jump"] = (Action)Jump;
+        script.Globals["fire"] = (Action)Fire;
+    }
+
     //TODO let player hardcode? eg walk right for 1s
 
     public virtual void Walk(float direction)
     {
         if (robot == null) return;
+        if (RobotData.Instance.IsTestRun) return;
         robot.movement.Move(direction);
     }
 
     public virtual void Jump()
     {
         if (robot == null) return;
+        if (RobotData.Instance.IsTestRun) return;
         robot.movement.Jump();
     }
 
     public virtual void Fire()
     {
         if (robot == null) return;
+        if (RobotData.Instance.IsTestRun) return;
         robot.attack.Attack();
     }
 }

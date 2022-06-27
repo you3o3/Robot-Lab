@@ -9,18 +9,104 @@ using UnityEngine.Tilemaps;
 // don't change the structure of the level object
 public class LevelInfo
 {
-    // TODO maybe move this to separate file, together with VerticalBlock
-    public struct HorizontalBlock
+    public struct RectBlock
     {
-        public float xStart;
-        public float xEnd;
-        public float y;
+        public float x1, x2;
+        public float y1, y2;
+        public bool defined;
 
-        public HorizontalBlock(float xStart, float xEnd, float y)
+        public RectBlock(float x1, float x2, float y1, float y2)
         {
-            this.xStart = xStart;
-            this.xEnd = xEnd;
-            this.y = y;
+            this.x1 = x1;
+            this.x2 = x2;
+            this.y1 = y1;
+            this.y2 = y2;
+            defined = true;
+        }
+
+        public RectBlock(Vector2 position)
+        {
+            x1 = position.x;
+            x2 = position.x + 1;
+            y1 = position.y;
+            y2 = position.y + 1;
+            defined = true;
+        }
+
+        public RectBlock Copy()
+        {
+            if (!defined) return new();
+            return new RectBlock(x1, x2, y1, y2);
+        }
+
+        // position should be next to the block (+1/-1), otherwise do nothing
+        // monodirectional extend, if already extended along x, then cannot extend along y, vise versa
+        // return whether extend is successful
+        public bool Extend(Vector2 position)
+        {
+            if (!defined)
+            {
+                this = new RectBlock(position);
+                return true;
+            }
+
+            bool extendedX = (x1 + 1 != x2 && y1 + 1 == y2);
+            bool extendedY = (x1 + 1 == x2 && y1 + 1 != y2);
+
+            if ((extendedX && position.y != y1) ||
+                (extendedY && position.x != x1))
+            {
+                return false;
+            }
+
+            if (!extendedX && !extendedY)
+            {
+                return ExtendX(position) || ExtendY(position);
+            }
+
+            if (extendedX)
+            {
+                return ExtendX(position);
+            }
+
+            if (extendedY)
+            {
+                return ExtendY(position);
+            }
+
+            return false;
+        }
+
+        private bool ExtendX(Vector2 position)
+        {
+            if (position.x == x1 - 1)
+            {
+                x1--;
+                return true;
+            }
+
+            if (position.x + 1 == x2 + 1)
+            {
+                x2++;
+                return true;
+            }
+            return false;
+        }
+
+        private bool ExtendY(Vector2 position)
+        {
+            if (position.y == y1 - 1)
+            {
+                y1--;
+                return true;
+            }
+
+            if (position.y + 1 == y2 + 1)
+            {
+                y2++;
+                return true;
+            }
+            return false;
         }
     }
 
@@ -32,9 +118,8 @@ public class LevelInfo
     public GameObject floatingPlatform;
     public GameObject traps;
 
-    // TODO maybe add vertical traps in future
-    public HorizontalBlock[] floatingPlatformPos;
-    public HorizontalBlock[] trapsPos;
+    public RectBlock[] floatingPlatformPos;
+    public RectBlock[] trapsPos;
 
     public GameObject winningObj;
     public GameObject[] enemies;
@@ -69,38 +154,33 @@ public class LevelInfo
             TileBase tile = map.GetTile(position);
             Vector3 tilePos = map.layoutGrid.CellToWorld(position);
             tilePositions.Add(tilePos);
-            //Debug.Log("x:" + tilePos.x + " y:" + tilePos.y + " tile:" + tile.name);
         }
         return tilePositions;
     }
 
-    private static HorizontalBlock[] CombineConsecutiveX(Vector2[] arr)
+    private static RectBlock[] CombineTiles(Vector2[] tilePos)
     {
-        if (arr.Length == 0) return new HorizontalBlock[0];
+        if (tilePos.Length == 0) return new RectBlock[0];
 
-        Vector2[] sorted = arr.OrderBy(o => o.x).ThenBy(o => o.y).ToArray();
-        List<HorizontalBlock> result = new();
+        Vector2[] sorted = tilePos.OrderBy(o => o.x).ThenBy(o => o.y).ToArray();
+        List<RectBlock> result = new();
 
-        float xStart = sorted[0].x, xFin = sorted[0].x;
-        float ySave = sorted[0].y;
-
-        for (int i = 1; i < arr.Length; i++)
+        bool nextBlock = false;
+        RectBlock block = new();
+        foreach (Vector2 tile in tilePos)
         {
-            Vector2 pos = sorted[i];
-            if (pos.x == xFin + 1 && pos.y == ySave)
+            nextBlock = !block.Extend(tile);
+            if (nextBlock)
             {
-                xFin = pos.x;
-            }
-            else
-            {
-                result.Add(new HorizontalBlock(xStart, xFin, ySave));
-                xStart = pos.x;
-                xFin = pos.x;
-                ySave = pos.y;
+                result.Add(block.Copy());
+                block = new RectBlock(tile);
+                nextBlock = false;
             }
         }
-
-        result.Add(new HorizontalBlock(xStart, xFin, ySave));
+        if (block.defined)
+        {
+            result.Add(block.Copy());
+        }
         return result.ToArray();
     }
 
@@ -128,11 +208,11 @@ public class LevelInfo
         // floating platform positions
         Tilemap fpmap = floatingPlatform.GetComponent<Tilemap>();
         List<Vector2> fpTilePos = GetAllTilePos(fpmap);
-        floatingPlatformPos = CombineConsecutiveX(fpTilePos.ToArray());
+        floatingPlatformPos = CombineTiles(fpTilePos.ToArray());
 
         // trap positions
         Tilemap tmap = traps.GetComponent<Tilemap>();
         List<Vector2> tTilePos = GetAllTilePos(tmap);
-        trapsPos = CombineConsecutiveX(tTilePos.ToArray());
+        trapsPos = CombineTiles(tTilePos.ToArray());
     }
 }

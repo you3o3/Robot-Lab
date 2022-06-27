@@ -38,13 +38,13 @@ public class GameManager : SingletonWMonoBehaviour<GameManager>
         levelLoader = GameObject.Find("Scene Loader").GetComponent<LevelLoader>();
 
         // activate level
-        currLevel = DataBuffer.Instance.Get<int>("level");
+        currLevel = DataBuffer.Instance.level;
         GameObject level = allLevels.transform.GetChild(currLevel - 1).gameObject;
         level.SetActive(true);
 
         Debug.Log(level.name);
 
-        DataBuffer.Instance.Add(new LevelInfo(level));
+        DataBuffer.Instance.levelInfo = new LevelInfo(level);
 
         // instantiate player FIXME always initialize at vector3.zero
         Player = Instantiate(RobotInfo.RobotPrefabs[RobotData.Instance.Robot],
@@ -124,8 +124,7 @@ public class GameManager : SingletonWMonoBehaviour<GameManager>
 
     public void ToNextLevel()
     {
-        DataBuffer.Instance.Add(currLevel + 1, "level");
-        //TODO figure out levels = diff scenes?
+        DataBuffer.Instance.level = currLevel + 1;
         Exit();
     }
 
@@ -159,10 +158,6 @@ public class GameManager : SingletonWMonoBehaviour<GameManager>
     {
         PlayerGaming = false;
         RobotData.Instance.Functions.Reset();
-        foreach(Fading f in FindObjectsOfType<Fading>())
-        {
-            f.StopAllCoroutines();
-        }
         levelLoader.LoadScene(buildIndex);
         ResumeGame();
     }
