@@ -10,6 +10,16 @@ Robot Lab is a single player 2D platformer/ coding game.
 
 ---
 
+<p align="center">
+<video src="GitResources/gameTrailer.mp4" width="400px" />
+</p>
+
+---
+
+# Report
+
+This is a project of the course COMP3329 in HKU. You can see the report of the project [here](GitResources/report.pdf).
+
 # Missing folders
 
 Some folders are not uploaded because they have Unity Asset Store EULA license or other licenses. Most of them are free to download. The following shows a complete list:
