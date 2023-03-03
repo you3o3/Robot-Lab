@@ -11,10 +11,18 @@ Robot Lab is a single player 2D platformer/ coding game.
 ---
 
 <p align="center">
-<video src="GitResources/gameTrailer.mp4" width="400px" />
+    <img src="GitResources/trailer1.gif" alt="Trailer1" width="400px" />
+</p>
+
+<p align="center">
+    <img src="GitResources/trailer2.gif" alt="Trailer2" width="400px" />
 </p>
 
 ---
+
+# Play it online!
+
+You can play the game online here: https://you3o3.github.io/Robot-Lab/.
 
 # Report
 
